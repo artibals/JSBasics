@@ -18,3 +18,12 @@
 - **HTML** -> Content
 - **CSS** -> Presentation
 - **JS** -> Dynamic Effects/Programming
+
+--------------------------------------------------
+
+- **Variable**(var, let, const) - is a container in which we can store a value in order to use it over and over again in our code.
+```var firstName = 'John';```
+
+- **Primitive JavaScript Data Types**
+```1. **Number:** Floating point numbers, for decimals and intergers```
+```2. **String:** Sequence of characters, used for text``` 
