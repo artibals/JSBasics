@@ -38,3 +38,26 @@ var cars = null;
   - 3. **Boolean:** Logical data type that can only be true or false
   - 4. **Undefined:** Data type of variable that does not have a value yet
   - 5. **Null:** Also means 'non-existent'
+
+- **Comments**
+
+```javascript
+//Comment
+/*
+Multiline comment
+*/
+```
+
+- **Type coercion** - JavaScript automaticaly converts one type of variable to another.
+
+```javascript
+console.log('Hello ' + 23);
+//will become string "Hello 23"
+```
+
+- **Variable mutation:** When you mutate a variable you are modifying the original value. An example of this would be to re-assign the `age` variable:
+
+```javascript
+var age = 23;
+age = 'twenty three'; //now age is a String
+```

@@ -1,3 +1,6 @@
+/***********
+Variables and data types
+*/ 
 var firstName = 'John';
 console.log(firstName);
 
@@ -13,5 +16,9 @@ console.log(job);
 job = 'Teacher';
 console.log(job);
 
-//var 3years = 3; &3years = 3; john/mark = 'John and Mark' -> error
-//var function = 23; delete = 23; if = 23 -> error
+/*
+//Variable naming rules
+
+var 3years = 3; &3years = 3; john/mark = 'John and Mark' -> error
+var function = 23; delete = 23; if = 23 -> error
+*/
