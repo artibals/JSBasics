@@ -1,4 +1,5 @@
 # JSBasics
+
 - **JavaScript** is lightweight, cross-platform, object-oriented computer programming language;
 
 - **JavaScript** is one of the three core technologies of web development;
@@ -22,8 +23,18 @@
 --------------------------------------------------
 
 - **Variable**(var, let, const) - is a container in which we can store a value in order to use it over and over again in our code.
-```var firstName = 'John';```
 
-- **Primitive JavaScript Data Types**
-```1. **Number:** Floating point numbers, for decimals and intergers```
-```2. **String:** Sequence of characters, used for text``` 
+```javascript
+var firstName = 'John';
+var age = 23;
+var isFullAge = true;
+var job;
+var cars = null;
+```
+
+- **Primitive JavaScript Data Types**(JavaScript has dynamic typing: data types are automatically assigned to variables)
+  - 1. **Number:** Floating point numbers, for decimals and intergers
+  - 2. **String:** Sequence of characters, used for text
+  - 3. **Boolean:** Logical data type that can only be true or false
+  - 4. **Undefined:** Data type of variable that does not have a value yet
+  - 5. **Null:** Also means 'non-existent'
