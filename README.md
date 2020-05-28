@@ -81,7 +81,7 @@ age = 'twenty three'; //now age is a String
 
 - **Logical Operators:**
 
-    ">", "<", ">=", "<="
+    ">", "<", ">=", "<=", "==", "===", "!=", "!=="
 
 - **Typeof Operator:**
 
