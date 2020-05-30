@@ -73,15 +73,35 @@ age = 'twenty three'; //now age is a String
 
 --------------------------------------------------
 
-**Basic Operators:**
+**JavaScript Operators:**
 
 - **Math Operators:**
 
-    "-", "+", "*", "/"
+    "-", "+", "*", "/", "="
 
+- **Comparison Operators:**
+
+  - ">"  -  greater than;
+  - "<"  -  less than;
+  - ">="  -  greater than or equall to;
+  - "<="  -  less than or equall to;
+  - "=="  -  equality;
+  - "==="  -  strict equality;
+  - "!="  -  inequality;
+  - "!=="  -  strict inequality;
+  
 - **Logical Operators:**
 
-    ">", "<", ">=", "<=", "==", "===", "!=", "!=="
+  - "&&"  -  AND operator(true if ALL are true);
+  - "||"  -  OR operator(true if ONE is true);
+  - "!"  -  NOT operator(inverts true/false value);
+
+- **Ternary operator** - JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.
+
+    ```javascript
+    variablename = (condition) ? value1 : value2
+    // where "?" is "if", ":" is "else"
+    ```
 
 - **Typeof Operator:**
 
@@ -100,3 +120,53 @@ age = 'twenty three'; //now age is a String
 |     18     | Postfix Increment |      n/a      |         … ++         |
 |     15     |   Multiplication  | left-to-right |         … * …        |
 |      3     |     Assignment    | right-to-left |         … = …        |
+
+--------------------------------------------------
+
+**Javascript Statements**:
+
+- **Conditional Statements:**
+  - Use `if` to specify a block of code to be executed, if a specified condition is true;
+
+  ```javascript
+  if (condition) {
+  //  block of code to be executed if the condition is true
+  }
+  ```
+  
+  - Use `else` to specify a block of code to be executed, if the same condition is false;
+
+  ```javascript
+  if (condition) {
+  //  block of code to be executed if the condition is true
+  } else {
+  //  block of code to be executed if the condition is false
+  }
+  ```
+
+  - Use `else if` to specify a new condition to test, if the first condition is false;
+
+  ```javascript
+  if (condition1) {
+  //  block of code to be executed if condition1 is true
+  } else if (condition2) {
+  //  block of code to be executed if the condition1 is false and condition2 is true
+  } else {
+  //  block of code to be executed if the condition1 is false and condition2 is false
+  }
+  ```
+
+  - Use `switch` to specify many alternative blocks of code to be executed;
+
+  ```javascript
+  switch(expression) {
+    case x:
+       // code block
+       break;
+    case y:
+       // code block
+       break;
+    default:
+       // code block
+  }
+  ```

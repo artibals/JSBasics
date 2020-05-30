@@ -1,16 +1,16 @@
 /***********
 Variables and data types
-*/ 
+*/
 var firstName = 'John';
 console.log(firstName);
 
-var lastName = 'Smith';//string
-var age = 23;//number
+var lastName = 'Smith'; //string
+var age = 23; //number
 
-var fullAge = true;//boolean
+var fullAge = true; //boolean
 console.log(fullAge);
 
-var job;//undefined
+var job; //undefined
 console.log(job);
 
 job = 'Teacher';

@@ -5,19 +5,19 @@ If / else statements
 var firstName = 'John';
 var civilStatus = 'single';
 
-if(civilStatus === 'married') {
+if (civilStatus === 'married') {
     console.log(firstName + ' is married!');
 } else {
-    console.log(firstName + ' will hopefully marry soon :)'); 
+    console.log(firstName + ' will hopefully marry soon :)');
 }
 
 
 var isMarried = true;
 
-if(isMarried) {
+if (isMarried) {
     console.log(firstName + ' is married!');
 } else {
-    console.log(firstName + ' will hopefully marry soon :)'); 
+    console.log(firstName + ' will hopefully marry soon :)');
 }
 
 
@@ -31,7 +31,7 @@ johnHeight = 1.82;
 markBMI = markMass / (markHeight * markHeight);
 johnBMI = johnMass / (johnHeight * johnHeight);
 
-if(markBMI > johnBMI){
+if (markBMI > johnBMI) {
     console.log('Mark\'s BMI is higher than John\'s: ' + markBMI);
 } else {
     console.log('John\'s BMI higher than Mark\'s: ' + johnBMI);
