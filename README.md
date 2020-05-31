@@ -173,7 +173,7 @@ age = 'twenty three'; //now age is a String
 
 **Truthy and Falsy Values**:
 
-A **falsy** value is something which evaluates to FALSE, for instance when checking a variable. There are only six falsey values in JavaScript: `undefined`, `null`, `NaN`, `0`, `""` (empty string), and `false` of course.
+- A **falsy** value is something which evaluates to FALSE, for instance when checking a variable. There are only six falsey values in JavaScript: `undefined`, `null`, `NaN`, `0`, `""` (empty string), and `false` of course.
 
 ```javascript
 var string = ""; // <-- falsy
@@ -189,4 +189,4 @@ var emptyArray = []; // <-- truthy, we'll explore more about this next
 var emptyObject = {}; // <-- truthy
 ```
 
-A **truthy** value is something which evaluates to TRUE. **Truthy** values are those that are NOT **falsy** values :)
+- A **truthy** value is something which evaluates to TRUE. **Truthy** values are those that are NOT **falsy** values :)
