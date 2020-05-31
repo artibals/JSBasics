@@ -24,7 +24,8 @@ Today **JavaScript** can be used in different places:
 
 --------------------------------------------------
 
-**Variable**
+## Variables
+
 (var, let, const) - is a container in which we can store a value in order to use it over and over again in our code.
 
 ```javascript
@@ -35,7 +36,9 @@ var job;
 var cars = null;
 ```
 
-**Primitive JavaScript Data Types**(JavaScript has dynamic typing: data types are automatically assigned to variables)
+### Primitive JavaScript Data Types
+
+(JavaScript has dynamic typing: data types are automatically assigned to variables)
 
 1. **Number:** Floating point numbers, for decimals and intergers
 2. **String:** Sequence of characters, used for text
@@ -45,7 +48,27 @@ var cars = null;
 
 --------------------------------------------------
 
-**Comments**:
+### Type coercion
+
+JavaScript automaticaly converts one type of variable to another.
+
+```javascript
+console.log('Hello ' + 23);
+//will become string "Hello 23"
+```
+
+### Variable mutation
+
+ When you mutate a variable you are modifying the original value. An example of this would be to re-assign the `age` variable:
+
+```javascript
+var age = 23;
+age = 'twenty three'; //now age is a String
+```
+
+--------------------------------------------------
+
+## Comments
 
 ```javascript
 //Comment
@@ -57,23 +80,7 @@ Multiline comment
 
 --------------------------------------------------
 
-**Type coercion** - JavaScript automaticaly converts one type of variable to another.
-
-```javascript
-console.log('Hello ' + 23);
-//will become string "Hello 23"
-```
-
-**Variable mutation:** When you mutate a variable you are modifying the original value. An example of this would be to re-assign the `age` variable:
-
-```javascript
-var age = 23;
-age = 'twenty three'; //now age is a String
-```
-
---------------------------------------------------
-
-**JavaScript Operators:**
+## JavaScript Operators
 
 - **Math Operators:**
 
@@ -109,7 +116,9 @@ age = 'twenty three'; //now age is a String
 
 --------------------------------------------------
 
-**Operator precedence** determines how operators are parsed concerning each other. Operators with higher precedence become the operands of operators with lower precedence.
+### Operator precedence
+
+determines how operators are parsed concerning each other. Operators with higher precedence become the operands of operators with lower precedence.
 
 [MDN link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 
@@ -123,10 +132,9 @@ age = 'twenty three'; //now age is a String
 
 --------------------------------------------------
 
-**Javascript Statements**:
+## Conditional Statements
 
-- **Conditional Statements:**
-  - Use `if` to specify a block of code to be executed, if a specified condition is true;
+- Use `if` to specify a block of code to be executed, if a specified condition is true;
 
   ```javascript
   if (condition) {
@@ -134,7 +142,7 @@ age = 'twenty three'; //now age is a String
   }
   ```
   
-  - Use `else` to specify a block of code to be executed, if the same condition is false;
+- Use `else` to specify a block of code to be executed, if the same condition is false;
 
   ```javascript
   if (condition) {
@@ -144,7 +152,7 @@ age = 'twenty three'; //now age is a String
   }
   ```
 
-  - Use `else if` to specify a new condition to test, if the first condition is false;
+- Use `else if` to specify a new condition to test, if the first condition is false;
 
   ```javascript
   if (condition1) {
@@ -156,7 +164,7 @@ age = 'twenty three'; //now age is a String
   }
   ```
 
-  - Use `switch` to specify many alternative blocks of code to be executed;
+- Use `switch` to specify many alternative blocks of code to be executed;
 
   ```javascript
   switch(expression) {
@@ -171,7 +179,9 @@ age = 'twenty three'; //now age is a String
   }
   ```
 
-**Truthy and Falsy Values**:
+--------------------------------------------------
+
+## Truthy and Falsy Values
 
 - A **falsy** value is something which evaluates to FALSE, for instance when checking a variable. There are only six falsey values in JavaScript: `undefined`, `null`, `NaN`, `0`, `""` (empty string), and `false` of course.
 
@@ -190,3 +200,96 @@ var emptyObject = {}; // <-- truthy
 ```
 
 - A **truthy** value is something which evaluates to TRUE. **Truthy** values are those that are NOT **falsy** values :)
+
+--------------------------------------------------
+
+## Functions
+
+A JavaScript function is a block of code designed to perform a particular task, function is executed when "something" invokes it (calls it).
+
+A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+The parentheses may include parameter names separated by commas:
+(parameter1, parameter2, ...)
+
+The code to be executed, by the function, is placed inside curly brackets: {}
+
+```javascript
+function myFunction(p1, p2) {
+  return p1 * p2;   // The function returns the product of p1 and p2
+}
+
+myFunction(2, 3); // function invocation (function call)
+```
+
+### Function Statement/Declaration
+
+The **function** statement declares a function.
+A declared **function** is “saved for later use”, and will be executed later, when it is invoked (called).
+Just as **Variable Declarations** must start with “var”, **Function Declarations** must begin with “function”.
+
+e.g.
+
+```javascript
+function bar() {
+  return 3;
+}
+```
+
+**function** is only declared here. For using it, it must be invoked using **function** name. e.g `bar()`;
+
+### Function Expression
+
+A JavaScript **function** can also be defined using an expression.
+A **function expression** can be stored in a variable:
+
+```javascript
+var x = function (a, b) {
+  return a * b
+}
+```
+
+After a **function expression** has been stored in a variable, the variable can be used as a **function**. **Functions** stored in variables do not need **function** names. They are always invoked (called) using the variable name.
+
+### Function Expression VS. Function Statement
+
+**Function Expression**:
+
+```javascript
+alert(foo()); // ERROR! foo wasn't loaded yet
+var foo = function() { return 5; }
+```
+
+**Function Declaration**:
+
+```javascript
+alert(foo()); // Alerts 5. Declarations are loaded before any code can run.
+function foo() {
+  return 5;
+}
+```
+
+- **Function declarations** load before any code is executed while **Function expressions** load only when the interpreter reaches that line of code.
+- Similar to the var statement, **function declarations** are hoisted to the top of other code. **Function expressions** aren’t hoisted, which allows them to retain a copy of the local variables from the scope where they were defined.
+
+### Benefits of Function Expressions
+
+There are several different ways that **function expressions** become more useful than function declarations.
+
+- As closures
+- As arguments to other functions
+- As Immediately Invoked Function Expressions (IIFE)
+
+--------------------------------------------------
+
+## Arrays
+
+JavaScript arrays are used to store multiple values in a single variable. An array is a special variable, which can hold more than one value at a time.
+
+```javascript
+var array_name = [item1, item2, ...];
+//or
+var array_name = new Array(item1, item2, ...)
+```
