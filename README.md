@@ -293,3 +293,73 @@ var array_name = [item1, item2, ...];
 //or
 var array_name = new Array(item1, item2, ...)
 ```
+
+--------------------------------------------------
+
+## Objects
+
+The **Object** class represents one of JavaScript's data types. It is used to store various keyed collections and more complex entities. **Objects** can be created using the `Object()` constructor or the object initializer / literal syntax.
+
+- **Object literal**
+
+```javascript
+var object_name = {};
+```
+
+- **new Object syntax**
+
+```javascript
+var object_name = new Object();
+```
+
+### Object Properties
+
+The `key:values` pairs in JavaScript **objects** are called properties:
+
+```javascript
+var person = {
+firstName: 'John',
+lastName: 'Smith',
+age: 50,
+isMarried: true
+}
+```
+
+### Accessing Object Properties
+
+You can access object properties in two ways:
+
+```javascript
+object_name.key
+//or
+object_name["key"]
+```
+
+### Object Methods
+
+Objects can also have methods. Methods are actions that can be performed on objects. Methods are stored in properties as function definitions.
+
+```javascript
+var object_name = {
+  key1: value1,
+  key2: value2,
+  key3: function() {return this.key1 + " " + this.key2;}
+}
+```
+
+A method is a function stored as a property.
+You access an object method with the following syntax:
+
+```javascript
+objectName.methodName();
+```
+
+### The **this** Keyword
+
+In a function definition, `this` refers to the "owner" of the function.
+
+In the example above, `this` is the `object_name` **object** that "owns" the `key3` function.
+
+In other words, `this.key1` means the `key1` property of this **object**.
+
+## Loops and Iterations
