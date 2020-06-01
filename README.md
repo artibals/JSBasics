@@ -362,4 +362,126 @@ In the example above, `this` is the `object_name` **object** that "owns" the `ke
 
 In other words, `this.key1` means the `key1` property of this **object**.
 
+--------------------------------------------------
+
 ## Loops and Iterations
+
+**JavaScript loops** are used to repeatedly run a block of code - until a certain condition is met. When developers talk about **iteration** or **iterating over**, say, an array, it is the same as **looping**. **JavaScript** offers several options to repeatedly run a block of code, including `while`, `do while`, `for` and `for-in`.
+
+**JavaScript** supports different kinds of loops:
+
+- `for` - loops through a block of code a number of times
+- `for/in` - loops through the properties of an object
+- `for/of` - loops through the values of an iterable object
+- `while` - loops through a block of code while a specified condition is true
+- `do/while` - also loops through a block of code while a specified condition is true.
+
+### The For Loop
+
+The most frequently used **loop** in **JavaScript** is the **for-loop**. The `for` loop has the following syntax:
+
+```javascript
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+```
+
+**Statement 1** is executed (one time) before the execution of the code block.
+
+**Statement 2** defines the condition for executing the code block.
+
+**Statement 3** is executed (every time) after the code block has been executed.
+
+**Example**:
+
+```javascript
+for (i = 0; i < 5; i++) {
+  console.log('Number ' + i); // 0, 1, 2, 3, 4
+}
+```
+
+From the example above, you can read:
+
+**Statement 1** sets a variable before the loop starts (var i = 0).
+
+**Statement 2** defines the condition for the loop to run (i must be less than 5).
+
+**Statement 3** increases a value (i++) each time the code block in the loop has been executed.
+
+### The While Loop
+
+The `while` **loop** loops through a block of code as long as a specified condition is true.
+
+```javascript
+while (condition) {
+  // code block to be executed
+}
+```
+
+**Example**:
+
+In the following example, the code in the **loop** will run, over and over again, as long as a **variable** (i) is less than 10:
+
+```javascript
+while (i < 10) {
+  console.log('Number ' + i);
+  i++;
+}
+```
+
+### The Do/While Loop
+
+The `do/while` **loop** is a variant of the `while` **loop**. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+```javascript
+do {
+  // code block to be executed
+}
+while (condition);
+```
+
+**Example**:
+
+The example below uses a `do/while` **loop**. The **loop** will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:
+
+```javascript
+do {
+  console.log('Number ' + i);
+  i++;
+}
+while (i < 10);
+```
+
+### Break and Continue Statements
+
+The `break` statement "jumps out" of a loop.
+
+The `continue` statement "jumps over" one iteration in the loop.
+
+#### The Break Statement
+
+The `break` statement breaks the loop and continues executing the code after the loop (if any):
+
+**Example**:
+
+```javascript
+for (i = 0; i < 10; i++) {
+  if (i === 3)  break;
+  console.log('Number ' + i);
+}
+```
+
+#### The Continue Statement
+
+The `continue` statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+**Example**:
+
+```javascript
+for (i = 0; i < 10; i++) {
+  if (i === 3)  continue;
+  console.log('Number ' + i);
+}
+
+// This example skips the value of 3:
+```
