@@ -14,3 +14,8 @@
 - **Array.pop()** --> removes the last element from an array.
 - **Array.shift()** --> removes the first array element and "shifts" all other elements to a lower index.
 - **indexOf()** --> returns the first index at which a given element can be found in the array, or -1 if it is not present.
+
+## Object Methods
+
+- **Object.hasOwnProperty()** --> checks if the property of a given object exists or not, returns TRUE or FALSE.
+- **delete Object.prop** --> deletes properties from objects.

@@ -485,3 +485,101 @@ for (i = 0; i < 10; i++) {
 
 // This example skips the value of 3:
 ```
+
+## Recursion
+
+**Recursion** is when a function calls itself until someone stops it. If no one stops it then it'll recurse (call itself) forever.
+
+Recursive functions let you perform a unit of work multiple times. This is exactly what for/while loops let us accomplish! Sometimes, however, recursive solutions are a more elegant approach to solving a problem.
+
+**The three key features of recursion**
+All recursive functions should have three key features:
+
+**A Termination Condition**
+Simply put: `if(something bad happened){ STOP };` The Termination Condition is our recursion fail-safe. Think of it like your emergency brake. It’s put there in case of bad input to prevent the recursion from ever running. In our factorial example, `if (x < 0) return;` is our termination condition. It’s not possible to factorial a negative number and thus, we don’t even want to run our recursion if a negative number is input.
+
+**A Base Case**
+Simply put: `if(this happens) { Yay! We're done };` The Base Case is similar to our termination condition in that it also stops our recursion. But remember, the termination condition is a catch-all for bad data. Whereas the base case is the goal of our recursive function. Base cases are usually within an if statement .In the factorial example, `if (x === 0) return 1;` is our base case. We know that once we’ve gotten x down to zero, we’ve succeeded in determining our factorial!
+
+**The Recursion**
+Simply put: Our function calling itself. In the factorial example, `return x * factorial(x — 1);` is where the recursion actually happens. We’re returning the value of the number x multiplied by the value of whatever factorial(x-1) evaluates to.
+
+**All Three Together**
+Now we still have no idea how our factorial example works, but ideally it makes more sense:
+
+```javascript
+function factorial(x) {
+  // TERMINATION
+  if (x < 0) return;
+  // BASE
+  if (x === 0) return 1;
+  // RECURSION
+  return x * factorial(x - 1);
+}
+factorial(3);
+// 6
+```
+
+### How JavaScript Works Behind The Scenes
+
+![JS WORKS](images/js_behind.png)
+
+### Execution Context
+
+**Execution Context** - is a box, a container, or a wrapper which stores variables and in which a piece of our code is evaluated. 
+By default it is Global **Execution Context**:
+
+- Code that is not inside any function
+
+- Associated with the global object
+
+- In the browser, that's the window object
+
+```javascript
+lastName === window.lastName
+//true
+```
+
+We can associate **Execution Context** with an object.
+**Execution Context Object** has three properties:
+
+- Variable Object(VO) - contain **function arguments**, **inner variable declarations** and **function declarations**;
+
+- Scope chain - contain current **variable objects** and **variable objects** of all it parents;
+
+- "This" variable;
+
+When **Function** is called, a new **Execution Context** is put on top of the **Execution Stack** and this happens in two phases:
+
+![EXECUTION Context](images/phases.png)
+
+If it's a **Global Context** than it's a **Global Code** that is executed.
+
+### Creation of the Variable Object
+
+![VO CREATION](images/creation_VO.png)
+
+**Functions** and **Variables** are HOISTED in JavaScript, which means that they are avaliable before the **Execution Phase** actually starts. **Functions** are already defined before the **Execution Phase** starts, while **Varibles** are setup to **Undefined** and will only be in the **Execution Phase**.
+
+### Scope Chain
+
+- **Scoping** answers the question "where can we access a certain variable?".
+- **Each new function creates a scope**: the space/environment, in which the variables it defines are accessible.
+- **Lexical scoping**: a function that is lexically within another function gets access to the scope of the outer function(parent function).
+
+![Scoping](images/scoping.png)
+![Execution Stack vs Scoping](images/ex_stackvsscoping.png)
+
+### 'This' variable
+
+The 'This' is a variable that each and every **Execution Context** gets and is stored in **Execution Context Oblect**.
+
+- **Regular function call**: the `this` keyword points at the global object(the window object in browser);
+- **Method call**: the `this` variable points to the object that is calling the method;
+- The `this` keyword is not assigned a value until a function where it is defined is actually called.
+
+### Execution Stack
+
+Last came, first goes.
+
+![Execution Stack](images/execution_stack.png)
